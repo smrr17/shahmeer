@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>
+    history.scrollRestoration = "manual";
+    (function () {
+      var nav = performance.getEntriesByType("navigation")[0];
+      if (!nav || nav.type !== "reload") return;
+      if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+      document.documentElement.style.scrollBehavior = "auto";
+      scrollTo(0, 0);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahmeer Ahmed — Senior Software Engineer</title>
+  <meta name="description" content="Shahmeer Ahmed builds AI agents, automation, mobile apps, and web platforms. React Native, React, and Node. Karachi, working with remote clients.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,550;1,6..72,450&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316382c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='14' fill='%23f4f1eb'%3ESA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="orbs" aria-hidden="true"><span></span><span></span></div>
+  <a class="skip" href="#proof">Skip to live proof</a>
+  <div class="progress" id="progress"></div>
+  <header class="nav">
+    <a class="mark" href="#top">Shahmeer Ahmed</a>
+    <nav>
+      <a href="#agents">AI</a>
+      <a href="#proof">Proof</a>
+      <a href="#apps">Apps</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-mail" href="mailto:shahmeerahmed219@gmail.com">shahmeerahmed219@gmail.com</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Senior software engineer · Karachi · Remote</p>
+      <h1>Shahmeer Ahmed</h1>
+      <p class="swap">I build <em id="role">AI agents</em></p>
+      <p class="lede">AI agents, automation, and the mobile and web products around them. Five years of React Native and MERN work, including AI automation at Carpediem and the agent system I shipped at Zenkoders.</p>
+      <div class="actions">
+        <a class="button" href="#proof">Watch it run</a>
+        <a class="button quiet" href="#contact">Start a project</a>
+      </div>
+      <ul class="facts">
+        <li><span>Focus</span> Mobile apps, web platforms, third-party APIs</li>
+        <li><span>Stack</span> React Native, React, Node.js, MongoDB</li>
+        <li><span>Also</span> AI automation, payments, maps, push</li>
+        <li><span>Reach</span> <a href="tel:+923012373463">+92 301 2373463</a></li>
+      </ul>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>AI agents</span><span>AI automation</span><span>React Native</span><span>MERN</span><span>RAG</span><span>OpenAI</span><span>iOS</span><span>Android</span>
+          <span>AI agents</span><span>AI automation</span><span>React Native</span><span>MERN</span><span>RAG</span><span>OpenAI</span><span>iOS</span><span>Android</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="agents" class="section">
+      <div class="section-head">
+        <h2>AI agents and automation</h2>
+        <p>At Carpediem, from February 2026, AI automation sits on the fleet platform. At Zenkoders, from February 2025 to January 2026, the agent answers from files the client uploaded.</p>
+      </div>
+      <div class="agent-grid">
+        <article class="case">
+          <p class="meta">Carpediem · Feb 2026 – present</p>
+          <h3>AI automation on the fleet platform</h3>
+          <p>I am the primary developer on the MERN fleet dashboard, and I am also building the AI automation on that product for the US fuel-station operator.</p>
+        </article>
+        <article class="case">
+          <p class="meta">Zenkoders · Agent</p>
+          <h3>Document agent</h3>
+          <p>People ask a question about technical documents. The agent answers from those files and keeps the source attached, using the OpenAI Assistants API, vector stores, and retrieval-augmented generation.</p>
+        </article>
+        <article class="case">
+          <p class="meta">Zenkoders · Automation</p>
+          <h3>The path around the answer</h3>
+          <p>Upload, retrieve the right passage, return the answer. That path is the automation: the client does not search four documents to piece a reply together.</p>
+        </article>
+        <article class="case">
+          <p class="meta">Zenkoders · Mobile</p>
+          <h3>The apps beside it</h3>
+          <p>One React Native codebase for iOS and Android. Load time came down 25% after the state and render work, and I mentored the juniors on the team.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="proof" class="section">
+      <div class="section-head">
+        <h2>Live proof</h2>
+        <p>Sample data, running in this page. Switch tabs while you share your screen. This demonstrates the work. It is not a client’s production system.</p>
+      </div>
+      <div class="stage">
+        <div class="stage-bar" role="tablist" aria-label="Live demonstrations">
+          <button type="button" role="tab" id="tab-fleet" data-scene="fleet" aria-selected="true" aria-controls="panel-fleet">Fleet ledger</button>
+          <button type="button" role="tab" id="tab-docs" data-scene="docs" aria-selected="false" aria-controls="panel-docs">AI agent</button>
+          <button type="button" role="tab" id="tab-ride" data-scene="ride" aria-selected="false" aria-controls="panel-ride">Ride status</button>
+          <span class="live"><i></i> Live</span>
+        </div>
+        <div class="stage-view">
+          <div class="scene on" role="tabpanel" id="panel-fleet" data-scene-panel="fleet" aria-labelledby="tab-fleet">
+            <div class="providers">
+              <span data-provider="Northline">Northline</span>
+              <span data-provider="Harbor">Harbor</span>
+              <span data-provider="Fieldline">Fieldline</span>
+              <span data-provider="Keystone">Keystone</span>
+            </div>
+            <div class="ledger" id="ledger"></div>
+            <p class="demo-foot" id="unified">0 records written to one schema</p>
+          </div>
+          <div class="scene" role="tabpanel" id="panel-docs" data-scene-panel="docs" aria-labelledby="tab-docs">
+            <p class="file-chip">Settlement notes.pdf</p>
+            <div class="ask">
+              <button type="button" data-q="0">When do cards settle?</button>
+              <button type="button" data-q="1">What counts as idle?</button>
+              <button type="button" data-q="2">Where is the source?</button>
+            </div>
+            <div class="answer">
+              <p id="answer-text"></p>
+              <p class="source" id="answer-source"></p>
+            </div>
+          </div>
+          <div class="scene" role="tabpanel" id="panel-ride" data-scene-panel="ride" aria-labelledby="tab-ride">
+            <div class="ride">
+              <svg viewBox="0 0 320 150" class="route" aria-hidden="true">
+                <path d="M24 112 C 70 112, 90 40, 160 40 S 250 112, 296 52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                <circle cx="24" cy="112" r="5"></circle>
+                <circle cx="296" cy="52" r="5"></circle>
+                <circle id="car" cx="24" cy="112" r="7"></circle>
+              </svg>
+              <div class="ride-card">
+                <p class="meta" id="ride-status">Request sent</p>
+                <p id="ride-detail">Looking for a driver nearby.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apps" class="section">
+      <div class="section-head">
+        <h2>Store gallery</h2>
+        <p>These pictures are the screenshots on the store listings, loaded from Apple and Google.</p>
+      </div>
+      <article class="store">
+        <div class="store-head">
+          <h3>BestDayEver</h3>
+          <a href="https://apps.apple.com/pk/app/bestdayever-app/id6479594992">App Store</a>
+        </div>
+        <div class="film">
+          <img alt="BestDayEver screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/04/89/ed/0489ed15-ac5e-f2c2-ab66-1c5ad36ce696/6540f265-fccd-41f3-8cad-33e8bddb23c4_1.png/480x852bb.png">
+          <img alt="BestDayEver screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c7/0c/63/c70c63d2-fd3a-02be-328d-55cba6f561f2/1a1482b0-799b-4e3c-845f-a8b93430e290_2.png/480x852bb.png">
+          <img alt="BestDayEver screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/04/a9/c9/04a9c985-71ea-c1dd-7be4-7b683eb575c5/80640af8-ca62-4be0-9de4-739724559c55_3.png/480x852bb.png">
+          <img alt="BestDayEver screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/be/f6/0f/bef60f0d-d545-859c-2383-e3ba8d12e050/647073ac-1ea3-4463-b2cd-075d8574d0af_4.png/480x852bb.png">
+        </div>
+      </article>
+      <article class="store">
+        <div class="store-head">
+          <h3>Bliss Babysitter</h3>
+          <a href="https://play.google.com/store/apps/details?id=com.blissnewbabysitter">Play Store</a>
+        </div>
+        <div class="film">
+          <img alt="Bliss Babysitter screenshot from the Play Store" referrerpolicy="no-referrer" src="https://play-lh.googleusercontent.com/StNZVNco3c1Q3WTvdFUOf1DlF5OJKCTv5NJWYE1pmwK7lM5NeVI_5SVjmRTMT6OCDOtdGacpOQOmzt8FBhDpXA=w1052-h592-rw">
+          <img alt="Bliss Babysitter screenshot from the Play Store" referrerpolicy="no-referrer" src="https://play-lh.googleusercontent.com/jcsRw6IPVFHDd_bsb5KFUlTgsj7dm6Gw10Zqale2jpTVXdFv64GwDIQzJdU7PdtT1w_2leQ6Hp2R3x7UGFCUeEw=w1052-h592-rw">
+          <img alt="Bliss Babysitter screenshot from the Play Store" referrerpolicy="no-referrer" src="https://play-lh.googleusercontent.com/i7vlcJ28owqCmYjGx0NRMjygNKg5WBTrzLk0zG7XHCcNhV-DfXR45kKwTEjWBBzKIoycFXpOcvSVXI5vZmPH=w1052-h592-rw">
+          <img alt="Bliss Babysitter screenshot from the Play Store" referrerpolicy="no-referrer" src="https://play-lh.googleusercontent.com/mInm8GfpwYK9FgAEmqr3KT_QXmq0_yDVWs-bRcDCCAOScgeKGw8v9SsJkI9yzZT7EiI8q7KyONw6L36g5hGM=w1052-h592-rw">
+        </div>
+      </article>
+      <article class="store">
+        <div class="store-head">
+          <h3>Buss'It</h3>
+          <a href="https://apps.apple.com/pk/app/bussit/id6760001285">App Store</a>
+        </div>
+        <div class="film">
+          <img alt="Buss'It screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0b/fe/ce/0bfecec0-47f2-e8c3-4979-d481f11e0dca/1.png/480x852bb.png">
+          <img alt="Buss'It screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/12/17/ca/1217ca82-9cee-9ad6-a2e0-c6f81e28ab92/2.png/480x852bb.png">
+          <img alt="Buss'It screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/cd/65/aa/cd65aacf-1e74-0ac5-2eea-5abf2094a844/3.png/480x852bb.png">
+          <img alt="Buss'It screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c9/3e/cc/c93ecc1c-c526-80fd-48d2-733e93cf12e6/4.png/480x852bb.png">
+        </div>
+      </article>
+      <article class="store">
+        <div class="store-head">
+          <h3>Ask Dr. Sherry</h3>
+          <a href="https://apps.apple.com/pk/app/ask-dr-sherry/id6757389052">App Store</a>
+        </div>
+        <div class="film">
+          <img alt="Ask Dr. Sherry screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/11/26/62/112662c8-3583-d6b3-e9fc-8983aef3de38/569__U00282_U0029.png/480x720bb.jpg">
+          <img alt="Ask Dr. Sherry screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a2/80/2e/a2802e8b-a7da-2369-da09-f77baa24e96d/570__U00283_U0029.png/480x720bb.jpg">
+          <img alt="Ask Dr. Sherry screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/51/e7/7a/51e77a34-d49c-546d-0c46-7787b9a353fc/571__U00282_U0029.png/480x720bb.jpg">
+          <img alt="Ask Dr. Sherry screenshot from the App Store" referrerpolicy="no-referrer" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2d/df/ba/2ddfba94-fe3f-d154-5083-037bc67cf11c/572__U00282_U0029.png/480x720bb.jpg">
+        </div>
+      </article>
+    </section>
+
+    <section id="work" class="section">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p>Production work from the last five years. Descriptions match what shipped.</p>
+      </div>
+
+      <article class="case feature">
+        <p class="meta">Carpediem · Feb 2026 – present · MERN</p>
+        <h3>Fleet Management</h3>
+        <p>A US fuel-station operator was reconciling trucks and fuel cards across four vendor portals. I am the primary developer on a single dashboard that replaces that.</p>
+        <ul>
+          <li>One integration layer for OpenRoad, Relay, Samsara, and WEX.</li>
+          <li>Transaction formats from each provider normalized into one schema for reporting.</li>
+          <li>Requirements taken directly from the operator and built through to a working production system.</li>
+          <li>AI automation on the same platform, alongside the unified provider data.</li>
+        </ul>
+      </article>
+
+      <div class="cases">
+        <article class="case">
+          <p class="meta">Zenkoders · 2025 – 2026</p>
+          <h3>AI agents and automation</h3>
+          <p>An agent over a client’s own technical files, plus the automation that takes a file from upload to a sourced answer. Built with the OpenAI Assistants API, vector stores, and retrieval-augmented generation.</p>
+          <p>On the mobile side of the same role, load time came down 25% after state and render work, with one React Native codebase for iOS and Android.</p>
+        </article>
+        <article class="case">
+          <p class="meta">Appicoders · 2023 – 2025</p>
+          <h3>Healthcare and commerce apps</h3>
+          <p>React Native apps for healthcare and e-commerce, taken from build to release. Payments, REST APIs, and push notifications sat in the client-facing apps. A shared component library cut time on new features by 30%.</p>
+        </article>
+        <article class="case">
+          <p class="meta">Solhub · 2023</p>
+          <h3>Cab hailing</h3>
+          <p>Live vehicle tracking and routes on Google Maps, with ride status kept in sync for riders and drivers through WebSockets and Firebase.</p>
+        </article>
+        <article class="case">
+          <p class="meta">Creative Buddies · 2021 – 2023</p>
+          <h3>Product features in an Agile team</h3>
+          <p>Joined as an intern and moved to junior engineer on performance. Shipped features and interface work with testing and review as part of the job.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <h2>What I take on</h2>
+        <p>Fixed scope and a fixed price before the build starts. You see a working version every week. The repository is yours at handover.</p>
+      </div>
+      <ol class="offers">
+        <li>
+          <h3>Business website</h3>
+          <p>Services, proof, and a clear way to enquire or book. Fast on a phone. You receive the code and the domain setup.</p>
+        </li>
+        <li>
+          <h3>Web application</h3>
+          <p>Accounts, dashboards, and internal tools. React on the front. Node and MongoDB when the product needs real data and logins.</p>
+        </li>
+        <li>
+          <h3>iOS and Android app</h3>
+          <p>One React Native app for both stores. Maps, payments, and push notifications when the product needs them.</p>
+        </li>
+        <li>
+          <h3>AI agents and automation</h3>
+          <p>An agent on your documents, and automation on an operating platform. I have shipped both: the document agent at Zenkoders, and AI automation on the fleet product at Carpediem.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>BS Computer Science, Iqra University, Karachi, 2023. Cambridge Proficiency, fluent English.</p>
+      </div>
+      <ol class="roles">
+        <li>
+          <div>
+            <h3>Software Engineer, MERN</h3>
+            <p>Carpediem · Karachi</p>
+          </div>
+          <time>Feb 2026 – Present</time>
+        </li>
+        <li>
+          <div>
+            <h3>Senior Software Engineer</h3>
+            <p>Zenkoders · Karachi</p>
+          </div>
+          <time>Feb 2025 – Jan 2026</time>
+        </li>
+        <li>
+          <div>
+            <h3>Software Engineer</h3>
+            <p>Appicoders · Karachi</p>
+          </div>
+          <time>Sep 2023 – Feb 2025</time>
+        </li>
+        <li>
+          <div>
+            <h3>Software Engineer</h3>
+            <p>Solhub · Karachi</p>
+          </div>
+          <time>Mar 2023 – Sep 2023</time>
+        </li>
+        <li>
+          <div>
+            <h3>Junior Software Engineer</h3>
+            <p>Creative Buddies · Karachi</p>
+          </div>
+          <time>Jun 2021 – Feb 2023</time>
+        </li>
+      </ol>
+      <ul class="skills">
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>React Native</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>MongoDB</li>
+        <li>MySQL</li>
+        <li>Firebase</li>
+        <li>Supabase</li>
+        <li>Flutter</li>
+        <li>Swift</li>
+        <li>Python</li>
+        <li>Redux</li>
+        <li>OpenAI API</li>
+        <li>Docker</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div>
+        <h2>Tell me what you need built.</h2>
+        <p class="lede">Send the product, the deadline, and what “done” looks like. I reply with a written scope and a price.</p>
+        <ul class="reach">
+          <li><a href="mailto:shahmeerahmed219@gmail.com">shahmeerahmed219@gmail.com</a></li>
+          <li><a href="tel:+923012373463">+92 301 2373463</a></li>
+          <li><a href="https://wa.me/923012373463">WhatsApp</a></li>
+          <li><a href="https://linkedin.com/in/smrr17">linkedin.com/in/smrr17</a></li>
+          <li><a href="https://github.com/smrr17">github.com/smrr17</a></li>
+        </ul>
+      </div>
+      <form id="brief">
+        <label>Name <input name="name" required autocomplete="name"></label>
+        <label>Company <input name="company" autocomplete="organization"></label>
+        <label>Email <input name="email" type="email" required autocomplete="email"></label>
+        <label>What should be built
+          <textarea name="brief" required rows="5" placeholder="A booking site, an iOS and Android app, a dashboard, an assistant on our documents."></textarea>
+        </label>
+        <button type="submit">Email this brief</button>
+        <p class="form-note" id="form-note">This opens your email app with the brief addressed to Shahmeer. Nothing is stored on a server.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Shahmeer Ahmed · Karachi, Pakistan</p>
+    <a href="mailto:shahmeerahmed219@gmail.com">shahmeerahmed219@gmail.com</a>
+  </footer>
+
+  <script src="motion.js"></script>
+</body>
+</html>
